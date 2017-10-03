@@ -1,0 +1,16 @@
+import axios from 'axios';
+
+export const FETCH_POSTS = 'fetch_posts';
+
+const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
+const API_KEY = '?key=whateveryouwantgrrrrrrrrrrl';
+
+//making axios request, then assigning it to playload; the redux-promise
+//middleware resolves the request for us when it sees this action.
+export const fetchPosts = () => {
+  const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
+  return {
+    type: FETCH_POSTS,
+    payload: request
+  };
+};
