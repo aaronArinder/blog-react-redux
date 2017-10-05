@@ -21,7 +21,6 @@ class PostsIndex extends Component {
   render() {
     return (
       <div>
-        <div>Posts index</div>
         <h3>Posts</h3>
         <ul className="list-group">{this.renderPosts()}</ul>
       </div>
